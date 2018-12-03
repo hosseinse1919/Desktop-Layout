@@ -1,0 +1,56 @@
+// main: ../merge.less
+
+status-icon {
+    svg {
+        height: 10px;
+    }
+    margin: 0 10px;
+    &.animate {
+        svg path:nth-child(3) {
+            animation: scaleing 2s 1.5s infinite linear;
+        }
+        svg path:nth-child(2) {
+            animation: scaleing 2s 2s infinite linear;
+        }
+        svg path:nth-child(1) {
+            animation: scaleing 2s 2.5s infinite linear;
+        }
+    }
+    temp-icon svg {
+        fill: #546e7a;
+        stroke: none;
+    }
+    &.status-danger{
+        svg {
+            fill: #e53935;
+        }
+    }
+    &.status-success{
+        svg {
+            fill: #43a047;
+        }
+    }
+    &.status-warning{
+        svg {
+            fill: #fb8c00;
+        }
+    }
+}
+
+@keyframes scaleing {
+    0% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}

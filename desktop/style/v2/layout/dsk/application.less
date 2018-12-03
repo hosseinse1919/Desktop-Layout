@@ -1,0 +1,115 @@
+// main: ../../merge.less
+html,
+body,
+dsk-application {
+    min-height: 100%;
+    height: 100%;
+}
+
+dsk-application {
+    display: grid;
+    grid-template-rows: 40px 80px auto 22px;
+    background-color: #606060;
+    overflow: hidden; // *:empty {
+    // margin: 1px;
+    // min-height: 20px;
+    // min-width: 20px;
+    // &:after {
+    //     content: "Empty";
+    //     color: rgba(255, 255, 255, 0.2);
+    //     text-align: center;
+    // }
+    // }
+    dsk-main-panel {
+        max-height: 100%;
+    }
+}
+
+dsk-main-panel {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+dsk-header {
+    display: flex;
+}
+
+.limitation {
+    max-height: ~"calc(100vh - 177px)";
+    height: ~"calc(100vh - 177px)";
+}
+
+dsk-ribbon.hide~dsk-main-panel {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    .limitation {
+        max-height: ~"calc(100vh - 97px)";
+        height: ~"calc(100vh - 97px)";
+    }
+}
+
+dsk-content {
+    max-width: ~"calc(100vw - 500px)";
+}
+
+dsk-option.hide+dsk-content {
+    max-width: ~"calc(100vw - 200px)";
+}
+
+dsk-navigator.hide~dsk-content {
+    max-width: ~"calc(100vw - 300px)";
+}
+
+dsk-navigator.hide~dsk-option.hide~dsk-content {
+    max-width: unset;
+}
+
+.no-ribbon {
+    dsk-ribbon {
+        display: none;
+    }
+    dsk-main-panel {
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    .limitation {
+        max-height: ~"calc(100vh - 97px)";
+        height: ~"calc(100vh - 97px)";
+        background-color: #000;
+    }
+}
+
+dsk-option {
+    display: block;
+    flex-basis: 300px;
+}
+
+.heading {
+    h2,
+    h3 {
+        font-weight: 100;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+}
+
+.container {
+    padding: 0 10px;
+}
+
+dsk-footer {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    &.hide~dsk-main-panel {
+        grid-row-end: 5;
+    }
+}
+
+dsk-ribbon.hide~dsk-footer.hide~dsk-main-panel {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    .limitation {
+        max-height: ~"calc(100vh - 75px)";
+        height: ~"calc(100vh - 75px)";
+    }
+}

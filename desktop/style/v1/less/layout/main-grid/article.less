@@ -1,0 +1,120 @@
+// main: ../../../merge.less
+article.main-article {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; //Colorizing
+    section:nth-child(even) .title-part {
+        background-color: #388e3c;
+    } //green 700
+    section:nth-child(odd) .title-part {
+        background-color: #1976d2;
+    } //blue 700
+    section {
+        border-radius: 10px;
+        color: #ccc;
+        overflow: hidden;
+        margin: 5px;
+        width: 320px;
+        min-width: 320px;
+        &.step-section {
+            .dark-border;
+
+            &.active{
+                outline: 1px dashed #1976d299;
+            }
+        }
+        .title-part {
+            color: #ccc;
+            padding: 5px;
+            height: 60px;
+            span {
+                text-transform: lowercase;
+            }
+            span::first-letter {
+                text-transform: uppercase;
+            }
+            .txt-name {
+                text-transform: uppercase;
+                font-size: 1.2em;
+            }
+        }
+        .content-part {
+            overflow-y: auto;
+            max-height: ~"calc(100% - 60px)";
+            &::-webkit-scrollbar {
+                width: 1em;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #363636;
+                outline: 1px solid slategrey;
+            }
+            .item-element {
+                margin-top: 3px;
+                >div {
+                    background-color: #424242;
+                    padding: 5px;
+                    margin-top: 1px;
+                }
+            }
+            span {
+                display: block;
+                text-transform: lowercase;
+            }
+            span::first-letter {
+                text-transform: uppercase;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: #42a5f5;
+                margin: 5px;
+                font-size: 1em;
+                font-weight: 400;
+            }
+            h1 {
+                margin-left: 0;
+                font-size: 1.2em;
+                color: #1e88e5
+            }
+            h2 {
+                margin-left: 10px;
+                color: #2196f3
+            }
+            h3 {
+                margin-left: 20px;
+                color: #42a5f5
+            }
+            h4 {
+                margin-left: 30px;
+                color: #64b5f6
+            }
+            h5 {
+                margin-left: 40px;
+                color: #90caf9
+            }
+            h6 {
+                margin-left: 50px;
+                color: #bbdefb
+            }
+            p {
+                margin: 0;
+            }
+            p,
+            span {
+                padding: 0 5px;
+            }
+            img {
+                max-width: 100px;
+                max-height: 100px;
+                border: 1px solid @border-color;
+                margin-right: -15px;
+                transform: rotateZ(-5deg);  
+            }
+        }
+    }
+}

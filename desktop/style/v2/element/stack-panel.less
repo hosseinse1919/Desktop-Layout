@@ -1,0 +1,23 @@
+// main: ../merge.less
+
+stack-panel {
+    display: flex;
+    flex-direction: column;
+    &.-extend,
+    -extend {
+        flex-grow: 1;
+    }
+    &.-horizontal {
+        flex-direction: row;
+    }
+    &.-rightset,
+    &.-right-set,
+    -rightset,
+    -right-set {
+        margin-left: auto;
+    }
+
+    &.-centeralize{
+        align-items: center;
+    }
+}

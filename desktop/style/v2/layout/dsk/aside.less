@@ -1,0 +1,26 @@
+// main: ../../merge.less
+
+dsk-aside {
+    position: fixed;
+    right: 0;
+    width: 300px;
+    top: 0;
+    height: 100%;
+    background-color: #616161;
+    &-header {  
+        display: block;
+        background-color: #424242;
+    }
+}
+
+dsk-aside-header {
+    display: block;
+    height: 44px;
+    color: #fff;
+}
+
+dsk-aside-body {
+    display: block;
+    height: ~"calc(100vh - 44px)";
+    overflow-y: auto;
+}

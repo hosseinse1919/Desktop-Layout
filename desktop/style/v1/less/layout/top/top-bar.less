@@ -1,0 +1,61 @@
+// main: ../../merge.less
+ 
+header.dsk-header {
+    background-color: #505050;
+    height: 40px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+  
+ 
+header {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    .logo {
+        width: 40px;
+        img,
+        svg {
+            height: 100%;
+            fill: silver;
+        }
+    }
+    h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 1.6em;
+
+    }
+    
+    .main-menu-nav {
+        display: none;
+    &.active {
+        display: flex;
+        position: absolute;
+        top: 40px;
+    }
+    a {
+        /* background-color: #bdbdbd; */
+        min-width: 77px;
+        min-height: 77px;
+        border: 1px solid @border-color;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin: 2px 0 0 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #a1a1a1;
+        background: rgba(70, 70, 70, 0.2);
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        &:hover {
+            background-color: #cdcdcd1a;
+            transition: 0.5s;
+            color: #000;
+        }
+    }
+}
+}

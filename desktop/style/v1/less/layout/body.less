@@ -1,0 +1,12 @@
+// main: ../../merge.less
+
+body {
+    background-color: #424242;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    grid-template-rows: 40px 0 minmax(auto, calc(100vh - 60px)) 20px;
+}
+body.show-ribbon {
+  grid-template-rows: 40px minmax(auto, 80px) minmax(auto, calc(100vh - 140px)) 20px;
+}

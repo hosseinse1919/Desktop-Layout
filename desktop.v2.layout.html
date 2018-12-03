@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link id="form-style" rel="stylesheet" href="./content/style/desktop-v2.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- class="no-ribbon" -->
+    <dsk-application>
+        <!-- header -->
+        <dsk-header>
+            <a href="javascript:window.location.assign(window.location.pathname)">
+               <svg width="25" height="25" fill="#424242" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                   <path d="M0,160L0,60 80,0 160,60 160,160 100,160 100,100 60,100 60,160Z"></path>
+               </svg>
+           </a>
+            <dsk-logo>
+                <h1 id="dsk-project-title">project name</h1>
+            </dsk-logo>
+            <dsk-options>
+                <btn-action onclick="document.getElementById('dsk-aside-option').classList.toggle('hide')">
+                    <temp-icon class="x24 fill-gray gear-icon"></temp-icon>
+                </btn-action>
+            </dsk-options>
+        </dsk-header>
+        <!-- ribbon -->
+        <dsk-ribbon id="dsk-ribbon" class="hide"></dsk-ribbon>
+        <!-- footer -->
+        <dsk-footer id="dsk-footer">
+            <stack-panel id="dsk-status-text" class="-horizontal">
+                <span>status text</span>
+            </stack-panel>
+
+            <stack-panel class="-horizontal -rightset">
+                <status-icon id="dsk-alarm-status" class="animate">
+                    <temp-icon class="status-icon"></temp-icon>
+                </status-icon>
+            </stack-panel>
+
+        </dsk-footer>
+
+        <!-- dsk-main-panel -->
+        <dsk-main-panel class="-horizontal -extend">
+            <!-- navigator -->
+            <dsk-navigator id="dsk-navigator" class="">
+                <nav-menu id="dsk-menu-nav"></nav-menu>
+                <action-menu id="dsk-action-menu"></action-menu>
+            </dsk-navigator>
+            <!-- / navigator -->
+
+
+
+            <dsk-option id="dsk-option-window" class="hide">
+                <dsk-option-head>
+                    <stack-panel class="heading -horizontal -centeralize">
+                        <dsk-option-title class="grow-1">
+                            <h2 id="dsk-option-title">Panel Title</h2>
+                        </dsk-option-title>
+                        <btn-action class="-right-set icon -x24 borderless" onclick="document.getElementById('dsk-option-window').classList.add('hide')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                                <path d="M0,0L40,40 M0,40L40,0"></path>
+                            </svg>
+                        </btn-action>
+                    </stack-panel>
+                </dsk-option-head>
+                <dsk-option-body class="limitation" id="dsk-option-container"></dsk-option-body>
+            </dsk-option>
+
+            <dsk-content>
+                <dsk-tabs>
+                    <dsk-tab-list id="dsk-tab-list">
+                        <!-- <page-tab>
+                            <page-tab-title> page title </page-tab-title>
+                            <page-tab-description> page description </page-tab-description>
+                            <page-tab-close> &times; </page-tab-close>
+                        </page-tab>
+                        <page-tab class="active">
+                            <page-tab-title> page title </page-tab-title>
+                            <page-tab-description> page description </page-tab-description>
+                            <page-tab-close> &times; </page-tab-close>
+                        </page-tab> -->
+                    </dsk-tab-list>
+                </dsk-tabs>
+                <dsk-frame id="dsk-main-frame" class="limitation">
+
+                </dsk-frame>
+            </dsk-content>
+        </dsk-main-panel>
+
+
+
+        <dsk-aside id="dsk-aside-option" class="hide">
+            <dsk-aside-header>
+                <stack-panel class="heading -horizontal -centeralize">
+                    <dsk-option-title class="grow-1">
+                        <h2>Panel Title</h2>
+                    </dsk-option-title>
+                    <btn-action class="-right-set icon -x24 borderless" onclick="document.getElementById('dsk-aside-option').classList.add('hide')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                            <path d="M0,0L40,40 M0,40L40,0"></path>
+                        </svg>
+                    </btn-action>
+                </stack-panel>
+            </dsk-aside-header>
+            <dsk-aside-body class=" container">
+                <!-- <iframe class="content-frame">Lorem Ipsum</iframe> -->
+
+                <h3>Apperiance</h3>
+                <btn-action onclick="DSKSRC.apperiance(event)" data-command="nav-bar-visibility">
+                    <temp-icon class="x24 fill-gray left-bar-icon"></temp-icon>
+                    <span>Hide Left Bar</span>
+                </btn-action>
+                <btn-action onclick="DSKSRC.apperiance(event)" data-command="option-bar-visibility">
+                    <temp-icon class="x24 fill-gray right-side-icon"></temp-icon>
+                    <span>Show Option panel</span>
+                </btn-action>
+                <btn-action onclick="DSKSRC.apperiance(event)" data-command="ribbon-visibility">
+                    <temp-icon class="x24 fill-gray top-bar-icon"></temp-icon>
+                    <span>Show Ribbon</span>
+                </btn-action>
+                <btn-action onclick="DSKSRC.apperiance(event)" data-command="status-bar-visibility">
+                    <temp-icon class="x24 fill-gray status-bar-icon"></temp-icon>
+                    <span>Show Status bar</span>
+                </btn-action>
+
+            </dsk-aside-body>
+        </dsk-aside>
+
+    </dsk-application>
+
+    <!-- scripts -->
+
+    <script src="./content/script/script.js"></script>
+
+</body>
+
+</html>

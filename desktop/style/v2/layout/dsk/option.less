@@ -1,0 +1,126 @@
+// main: ../../merge.less
+dsk-option-head,
+dsk-option-body,
+dsk-option-title {
+    display: block;
+}
+
+dsk-option {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    right: 0;
+    order: 2;
+}
+
+dsk-option {
+    position: absolute;
+    animation: slide-in-right 0.5s;
+    &.close {
+        transition: 0.5s;
+        margin-right: -200px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        margin-right: -200px;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+dsk-option-head {
+    height: 35px;
+    background-color: #424242;
+    color: #fff;
+    btn-action {
+        min-height: 30px;
+    }
+}
+
+dsk-option-body {
+    background-color: #C0C0C0;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    subject-body {
+        display: block;
+        visibility: collapse;
+        height: 0;
+        overflow: hidden;
+        min-height: 0;
+        transition: 0.6s;
+        opacity: 0;
+    }
+    subject-header {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        margin: 0 15px;
+        svg {
+            //  vertical-align: -5px;
+            stroke: #000;
+            stroke-width: 8px;
+        }
+        span {
+            padding: 0 10px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &.open-mode {
+            .close-state {
+                visibility: hidden;
+            }
+            +subject-body {
+                visibility: visible;
+                height: auto;
+                min-height: 100px;
+                opacity: 1;
+            }
+        }
+    }
+    subject-body {
+        .input-control {
+            display: flex;
+            border-top: 1px solid black;
+            background-color: #AFAFAF;
+            label {
+                order: 1;
+                flex-grow: 1;
+                padding: 5px;
+            }
+            input {
+                order: 2;
+                border: none;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                padding: 5px;
+                &:read-only {
+                    background-color: #AFAFAF;
+                }
+            }
+            button {
+                border: none;
+                padding: 5px 15px;
+                background-color: #efefef;
+                color: #212121;
+                margin: 5px;
+                border-radius: 5px; //  justify-self: flex-end;
+                margin-left: auto;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #cfcfcf;
+                }
+            }
+        }
+    }
+}

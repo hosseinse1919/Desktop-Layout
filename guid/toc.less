@@ -1,0 +1,66 @@
+ 
+mark {
+    background-color: transparent;
+    color: #2196f3;
+    font-weight: bold;
+}
+
+.hpdding(@c ) when (@c >1) {
+    .hpdding(@c - 1);
+    a.h@{c} {
+        padding-left: (@c - 1) * 20px;
+        color: spin(#42a5f5, @c *360 /6);
+
+        &:visited {
+            color: white;
+        }
+    }
+}
+
+.toc {
+    margin-top: 20px;
+    color: #757575;
+    .content-box {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid gray;
+        padding: 0 5px;
+    }
+    .message {
+        color: #757575;
+        margin-left: 10px;
+        font-size: 0.8rem;
+    }
+    a {
+        display: flex;
+        align-items: flex-end;
+        color: #42a5f5;
+        margin-top: 2px;
+        &::after {
+            content: attr(href);
+            color: #757575;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            text-decoration: none !important;
+            &::first-letter {
+                color: red;
+            }
+        }
+        &:hover {
+            transition: 0.33s;
+            filter: (20%);
+            &::after {
+                transition: 0.33s;
+                color: inherit;
+            }
+        }
+       
+       
+    }
+    .hpdding(6);
+}

@@ -1,0 +1,100 @@
+.headpad(@c ) when (@c >0) {
+    .headpad(@c - 1);
+    @basecolor: spin(#42a5f5, @c *360 /6);
+    h@{c} {
+        margin: 0 (@c - 1) * 20px;
+        color: lighten(@basecolor, 20%);
+        text-transform: capitalize;
+        padding : 5px 10px 5px 10px;
+  
+        font-weight: 400;
+      //  border-bottom: 1px solid fade( darken(@basecolor , 20%), 30%); // + em  {
+        margin-bottom: 5px;
+        background-image:
+         linear-gradient(90deg, fade(@basecolor,20%) , fade(@basecolor,0) 70%)
+          ,linear-gradient(45deg, fade(@basecolor,50%)  , fade(@basecolor,0) 50%) 
+          ,linear-gradient(135deg, fade(@basecolor,50%)  , fade(@basecolor,0) 50%) 
+         ,linear-gradient(135deg,fade(@basecolor,0) 30px , fade(@basecolor,20%)   , fade(@basecolor,0) 60px ) 
+
+         ;
+        background-size: 100% 1px 
+         ,40px 40px
+         , 20px 20px
+        , 200px 30px ;
+        background-repeat: no-repeat;
+        background-position: left bottom 
+         ,left bottom
+         ,left top 5px 
+        , left bottom ;
+        +div {
+            margin-left: (@c - 1) * 20px;
+            margin-right: (@c - 1) * 20px;
+            padding-right: 15px;
+            padding-left: 15px; // background-color: #424242;
+        }
+    }
+}
+
+article {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: pre-line;
+    font-size: 1.2em;
+    max-width: 1024px;
+    color: #cccccc;
+    a {
+        text-decoration: none;
+        color: #efefef;
+        &.doc-link {
+            color: #78909c;
+            &:before {
+                content: "🡥 ";
+            }
+            &:hover:before {
+                color: #78909c;
+                transition: 0.33s;
+            }
+        }
+    }
+    .element-link {
+        font-size: 24px;
+        display: block;
+    }
+    code {
+        color: #ef5350;
+    }
+    p {
+        font-size: 1em;
+        font-family: shabnam;
+        text-align: justify;
+    }
+    .headpad(6);
+    em {
+        color: #9e9e9e;
+        font-size: 0.9em;
+        &::before {
+            content: "("
+        }
+        &::after {
+            content: ")"
+        }
+    }
+    p {
+        margin: 0;
+        margin-top: 5px;
+    }
+    ul {
+        margin: 0;
+        margin-left: 20px;
+        list-style: none;
+        color: #bbbbbb;
+        padding: 0;
+    }
+    ul+em {
+        margin-left: 60px;
+    }
+    img {
+        max-width: 100%;
+        border: 1px dotted #424242;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,206 @@
+article {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  white-space: pre-line;
+  font-size: 1.2em;
+  max-width: 1024px;
+  color: #cccccc;
+}
+article a {
+  text-decoration: none;
+  color: #efefef;
+}
+article a.doc-link {
+  color: #78909c;
+}
+article a.doc-link:before {
+  content: "🡥 ";
+}
+article a.doc-link:hover:before {
+  color: #78909c;
+  transition: 0.33s;
+}
+article .element-link {
+  font-size: 24px;
+  display: block;
+}
+article code {
+  color: #ef5350;
+}
+article p {
+  font-size: 1em;
+  font-family: shabnam;
+  text-align: justify;
+}
+article h1 {
+  margin: 0 0px;
+  color: #caa3fa;
+  text-transform: capitalize;
+  padding: 5px 10px 5px 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg, rgba(146, 66, 245, 0.2), rgba(146, 66, 245, 0) 70%), linear-gradient(45deg, rgba(146, 66, 245, 0.5), rgba(146, 66, 245, 0) 50%), linear-gradient(135deg, rgba(146, 66, 245, 0.5), rgba(146, 66, 245, 0) 50%), linear-gradient(135deg, rgba(146, 66, 245, 0) 30px, rgba(146, 66, 245, 0.2), rgba(146, 66, 245, 0) 60px);
+  background-size: 100% 1px 
+         ,40px 40px
+         , 20px 20px
+        , 200px 30px ;
+  background-repeat: no-repeat;
+  background-position: left bottom 
+         ,left bottom
+         ,left top 5px 
+        , left bottom ;
+}
+article h1 + div {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+article h2 {
+  margin: 0 20px;
+  color: #faa3d3;
+  text-transform: capitalize;
+  padding: 5px 10px 5px 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg, rgba(245, 66, 165, 0.2), rgba(245, 66, 165, 0) 70%), linear-gradient(45deg, rgba(245, 66, 165, 0.5), rgba(245, 66, 165, 0) 50%), linear-gradient(135deg, rgba(245, 66, 165, 0.5), rgba(245, 66, 165, 0) 50%), linear-gradient(135deg, rgba(245, 66, 165, 0) 30px, rgba(245, 66, 165, 0.2), rgba(245, 66, 165, 0) 60px);
+  background-size: 100% 1px 
+         ,40px 40px
+         , 20px 20px
+        , 200px 30px ;
+  background-repeat: no-repeat;
+  background-position: left bottom 
+         ,left bottom
+         ,left top 5px 
+        , left bottom ;
+}
+article h2 + div {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+article h3 {
+  margin: 0 40px;
+  color: #facaa3;
+  text-transform: capitalize;
+  padding: 5px 10px 5px 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg, rgba(245, 146, 66, 0.2), rgba(245, 146, 66, 0) 70%), linear-gradient(45deg, rgba(245, 146, 66, 0.5), rgba(245, 146, 66, 0) 50%), linear-gradient(135deg, rgba(245, 146, 66, 0.5), rgba(245, 146, 66, 0) 50%), linear-gradient(135deg, rgba(245, 146, 66, 0) 30px, rgba(245, 146, 66, 0.2), rgba(245, 146, 66, 0) 60px);
+  background-size: 100% 1px 
+         ,40px 40px
+         , 20px 20px
+        , 200px 30px ;
+  background-repeat: no-repeat;
+  background-position: left bottom 
+         ,left bottom
+         ,left top 5px 
+        , left bottom ;
+}
+article h3 + div {
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+article h4 {
+  margin: 0 60px;
+  color: #d3faa3;
+  text-transform: capitalize;
+  padding: 5px 10px 5px 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg, rgba(165, 245, 66, 0.2), rgba(165, 245, 66, 0) 70%), linear-gradient(45deg, rgba(165, 245, 66, 0.5), rgba(165, 245, 66, 0) 50%), linear-gradient(135deg, rgba(165, 245, 66, 0.5), rgba(165, 245, 66, 0) 50%), linear-gradient(135deg, rgba(165, 245, 66, 0) 30px, rgba(165, 245, 66, 0.2), rgba(165, 245, 66, 0) 60px);
+  background-size: 100% 1px 
+         ,40px 40px
+         , 20px 20px
+        , 200px 30px ;
+  background-repeat: no-repeat;
+  background-position: left bottom 
+         ,left bottom
+         ,left top 5px 
+        , left bottom ;
+}
+article h4 + div {
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+article h5 {
+  margin: 0 80px;
+  color: #a3faca;
+  text-transform: capitalize;
+  padding: 5px 10px 5px 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg, rgba(66, 245, 146, 0.2), rgba(66, 245, 146, 0) 70%), linear-gradient(45deg, rgba(66, 245, 146, 0.5), rgba(66, 245, 146, 0) 50%), linear-gradient(135deg, rgba(66, 245, 146, 0.5), rgba(66, 245, 146, 0) 50%), linear-gradient(135deg, rgba(66, 245, 146, 0) 30px, rgba(66, 245, 146, 0.2), rgba(66, 245, 146, 0) 60px);
+  background-size: 100% 1px 
+         ,40px 40px
+         , 20px 20px
+        , 200px 30px ;
+  background-repeat: no-repeat;
+  background-position: left bottom 
+         ,left bottom
+         ,left top 5px 
+        , left bottom ;
+}
+article h5 + div {
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+article h6 {
+  margin: 0 100px;
+  color: #a3d3fa;
+  text-transform: capitalize;
+  padding: 5px 10px 5px 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg, rgba(66, 165, 245, 0.2), rgba(66, 165, 245, 0) 70%), linear-gradient(45deg, rgba(66, 165, 245, 0.5), rgba(66, 165, 245, 0) 50%), linear-gradient(135deg, rgba(66, 165, 245, 0.5), rgba(66, 165, 245, 0) 50%), linear-gradient(135deg, rgba(66, 165, 245, 0) 30px, rgba(66, 165, 245, 0.2), rgba(66, 165, 245, 0) 60px);
+  background-size: 100% 1px 
+         ,40px 40px
+         , 20px 20px
+        , 200px 30px ;
+  background-repeat: no-repeat;
+  background-position: left bottom 
+         ,left bottom
+         ,left top 5px 
+        , left bottom ;
+}
+article h6 + div {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+article em {
+  color: #9e9e9e;
+  font-size: 0.9em;
+}
+article em::before {
+  content: "(";
+}
+article em::after {
+  content: ")";
+}
+article p {
+  margin: 0;
+  margin-top: 5px;
+}
+article ul {
+  margin: 0;
+  margin-left: 20px;
+  list-style: none;
+  color: #bbbbbb;
+  padding: 0;
+}
+article ul + em {
+  margin-left: 60px;
+}
+article img {
+  max-width: 100%;
+  border: 1px dotted #424242;
+  padding: 5px;
+}

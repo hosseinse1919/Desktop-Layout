@@ -1,0 +1,40 @@
+// main: ../merge.less
+
+btn-action {
+    user-select: none;
+    display: flex;
+    border: 1px dashed rgba(192, 192, 192, 0.2);
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    min-height: 40px;
+    color: silver;
+    margin: 2px;
+    svg {
+        stroke: silver;
+    }
+    &:hover {
+        cursor: pointer;
+        color: gray;
+        svg {
+            stroke: gray;
+        }
+    }
+    &:active {
+        color: black;
+        svg {
+            stroke: black;
+        }
+    }
+    &.borderless {
+        border: none;
+    }
+    temp-icon{
+        svg {
+            stroke:  silver;
+        }
+        +span{
+            padding: 5px 10px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+// main: ../../merge.less
+dsk-navigator {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    background-color: #252526;
+    nav-menu {
+        flex-grow: 1;
+        subject-title {
+            user-select: none;
+            display: block;
+            color: #2196f3;
+            padding: 2px 15px;
+        }
+        btn-menu-action {
+            display: flex;
+            user-select: none;
+            padding: 2px 30px;
+            transition: 0.5s;
+            color: #CCCCCC;
+            align-items: center;
+            &:hover {
+                cursor: pointer;
+                background-color: #2A2D2E;
+            }
+            svg {
+                stroke: #efefef;
+            
+            }
+            span {
+                display: inline-block;
+                padding: 0 10px;
+            }
+        }
+    }
+    action-menu {
+        btn-action {
+            border: none;
+            border-top: 1px solid lighten(#252526, 3%);
+        }
+    }
+}

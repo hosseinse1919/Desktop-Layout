@@ -1,0 +1,84 @@
+mark {
+  background-color: transparent;
+  color: #2196f3;
+  font-weight: bold;
+}
+.toc {
+  margin-top: 20px;
+  color: #757575;
+}
+.toc .content-box {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+}
+.toc .content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  padding: 0 5px;
+}
+.toc .message {
+  color: #757575;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+.toc a {
+  display: flex;
+  align-items: flex-end;
+  color: #42a5f5;
+  margin-top: 2px;
+}
+.toc a::after {
+  content: attr(href);
+  color: #757575;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  text-decoration: none !important;
+}
+.toc a::after::first-letter {
+  color: red;
+}
+.toc a:hover {
+  transition: 0.33s;
+  filter: 20%;
+}
+.toc a:hover::after {
+  transition: 0.33s;
+  color: inherit;
+}
+.toc a.h2 {
+  padding-left: 20px;
+  color: #f542a5;
+}
+.toc a.h2:visited {
+  color: white;
+}
+.toc a.h3 {
+  padding-left: 40px;
+  color: #f59242;
+}
+.toc a.h3:visited {
+  color: white;
+}
+.toc a.h4 {
+  padding-left: 60px;
+  color: #a5f542;
+}
+.toc a.h4:visited {
+  color: white;
+}
+.toc a.h5 {
+  padding-left: 80px;
+  color: #42f592;
+}
+.toc a.h5:visited {
+  color: white;
+}
+.toc a.h6 {
+  padding-left: 100px;
+  color: #42a5f5;
+}
+.toc a.h6:visited {
+  color: white;
+}

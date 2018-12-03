@@ -1,0 +1,25 @@
+// main: ../../../merge.less
+
+main-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    background-color: #21212121;
+    overflow-y: auto;
+    grid-template-rows: 25px auto;
+    main-nav {
+        display: flex;
+        margin-top: 2px;
+    }
+    main-frame {
+        display: grid;
+        overflow: auto; // grid-template-rows: auto;
+        // grid-template-columns: auto;
+        >div {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}

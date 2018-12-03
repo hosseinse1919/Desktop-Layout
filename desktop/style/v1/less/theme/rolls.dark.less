@@ -1,0 +1,27 @@
+// main: ../../merge.less
+ 
+.dark-bg() {
+    background-color: #212121;
+}
+
+.dark-border() {
+    border: 1px solid #323232;
+}
+
+.dark-fill() {
+    fill: #212121;
+}
+
+.dark-stroke() {
+    stroke: #323232;
+}
+
+.dark-fill-stroke(@a)  {
+    fill: lighten(#212121, @a * 5%);
+    stroke: lighten(#323232, @a *  5%);
+}
+
+.dark-fill-stroke() {
+    .dark-fill;
+    .dark-stroke;
+}

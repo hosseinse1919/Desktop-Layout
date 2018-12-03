@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="toc.css">
+    <title>Document</title>
+
+    <style>
+        .execute {
+            background-color: transparent;
+            border: none;
+            color: #ccc;
+            border: 1px solid rgba(200, 200, 200, 0.2);
+            margin-top: 10px;
+            padding: 5px;
+            display: block;
+        }
+
+        .execute:hover {
+            background-color: rgba(200, 200, 200, 0.2);
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+
+    </article>
+
+
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var article = document.getElementsByTagName("article")[0];
+                article.innerHTML = parent.MakeMD(this.responseText.split("\n"));
+
+
+                var n = document.querySelectorAll("pre code");
+
+                n.forEach(element => {
+                    element.contentEditable = true;
+
+                    var btn = document.createElement("button")
+                    btn.textContent ="▷▶ execute "
+                    btn.className = "execute";
+                    //  element.parentElement.insertBefore(btn , element)
+                    element.parentElement.appendChild(btn)
+
+                    btn.addEventListener("click", ev => {
+                        var t = ev.currentTarget.previousElementSibling.innerText;
+                        console.log(t);
+
+                        eval(t.replace(/\$/g, "parent.Desktop"));
+                    })
+                });
+
+                setTimeout(() => {
+                    parent.MakeTOC(article);
+                }, 500);
+
+
+            }
+
+
+
+
+        };
+        xhttp.open('GET', 'document.md', true);
+        xhttp.send();
+    </script>
+</body>
+
+</html>

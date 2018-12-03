@@ -1,0 +1,58 @@
+// main: ../../merge.less
+
+@border-color: #424242;
+.a-basic-1() {
+    border: 1px solid @border-color;
+    color: #a1a1a1;
+    background: rgba(70, 70, 70, 0.2);
+    &:hover {
+        background-color: #cdcdcd1a;
+        transition: 0.5s;
+        color: #000;
+    }
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    
+    a {
+        .a-basic-1;
+        padding: 5px;
+        text-decoration: none;
+        border: 1px solid @border-color;
+        
+        margin: 1px;
+        &.file::before {
+            content: "file-icon"
+        }
+    }
+} 
+
+aside {
+    background-color: #555555;
+    margin: 1px;
+    nav {
+        border-top: 1px solid black;
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+#top-report {
+    display: flex;
+    justify-content: flex-start;
+    a {
+        text-decoration: none;
+        &:target,
+        &.activated {
+            color: #66bb6a;
+            &::before,
+            &::after {
+                color: #66bb6a;
+                transition: 0.33s;
+            }
+        }
+    }
+}

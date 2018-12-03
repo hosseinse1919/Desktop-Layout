@@ -1,0 +1,51 @@
+// main: ../../merge.less
+@bgcolor :lighten(#606060, 5%);
+@text-lighten : lighten(@bgcolor , 10%);
+@btn-color : lighten(@bgcolor , 7%);
+dsk-ribbon {
+    background-color: @bgcolor ;
+    display: flex;
+    group-items {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid rgba(192, 192, 192, 0.2);
+        flex-basis: 60px;
+        gp-head {
+            order: 2;
+            justify-content: center;
+            text-align: center;
+            color: @text-lighten;
+            font-size: smaller;
+        }
+        gp-body {
+            display: flex;
+            order: 1;
+            flex-grow: 1;
+            btn-ribbon {
+                transition: 0.5s;
+                padding: 3px 5px;
+                user-select: none;
+                display: flex;
+                flex-direction: column;
+                background-color: @btn-color ;
+                border: 1px solid darken(@btn-color , 10%);
+                span {
+                    display: block;
+                    line-height: 20px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: darken(@btn-color , 10%);
+                    span {
+                        color: #2196f3;
+                    }
+                }
+                &:active {
+                    span {
+                        color: #ff9800;
+                    }
+                }
+            }
+        }
+    }
+}

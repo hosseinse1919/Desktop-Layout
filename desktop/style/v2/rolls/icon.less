@@ -1,0 +1,56 @@
+// main: ../merge.less
+.sizemaker(@p) {
+    &.-x@{p},
+    &.x@{p} {
+        svg {
+            width: @p * 1px;
+            height: @p * 1px;
+        }
+    }
+}
+
+.icon,
+temp-icon {
+    // svg {
+    //     stroke: gray;
+    //     stroke-width: 2px;
+    // }
+    .sizemaker(512);
+    .sizemaker(256);
+    .sizemaker(128);
+    .sizemaker(64);
+    .sizemaker(32);
+    .sizemaker(24);
+    .sizemaker(18);
+    .sizemaker(16);
+    .sizemaker(12);
+    .sizemaker(8);
+}
+
+temp-icon {
+    display: inline-flex;
+    +span{
+        margin-left: 5px;
+    }
+    svg {
+        fill: none;
+        stroke: #212121;
+        stroke-width: 2px;
+    }
+    &.fill-gray {
+        svg {
+            fill: #9e9e9e;
+        }
+    }
+    &.fill-blue {
+        svg {
+            fill: #2196f3;
+        }
+    }
+    &.no-stroke {
+        svg {
+            stroke: none;
+            stroke-width: 0;
+        }
+    }
+}
